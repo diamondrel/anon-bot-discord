@@ -1,0 +1,13 @@
+name: main
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: execute py script
+        env:
+          token: ${{ secrets.token }}
+          channel: ${{ secrets.channel }}
+        run: python main.py
