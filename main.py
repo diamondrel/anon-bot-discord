@@ -25,7 +25,7 @@ async def _hello(ctx:SlashContext, text:str):
   print(client)
   print("\n")
   print(channel_name_secret)
-  channel = client.get_channel(channel_name_secret)
+  await channel = client.get_channel(channel_name_secret)
   print(text)
   print("\n")
   print(channel)
