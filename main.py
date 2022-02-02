@@ -1,5 +1,6 @@
 import os
 discord_token_secret = os.environ['token']
+channel_name_secret = os.environ['channel']
 from discord.ext import commands
 from discord_slash import SlashCommand, SlashContext
 from discord_slash.utils.manage_commands import create_option
@@ -21,7 +22,7 @@ slash = SlashCommand(client, sync_commands=True)
 )
 async def _hello(ctx:SlashContext, text:str):
   await client.wait_until_ready()
-  channel = client.get_channel(938277429720530954)
+  channel = client.get_channel(channel_name_secret)
   await channel.send(text)
   await ctx.send("Sent!",hidden=True,)
 
