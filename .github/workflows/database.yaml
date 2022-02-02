@@ -1,0 +1,4 @@
+database:
+  env:
+    token: ${{ secrets.token }}
+    channel: ${{ secrets.channel }}
