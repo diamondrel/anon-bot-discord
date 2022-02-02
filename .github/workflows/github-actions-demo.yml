@@ -1,0 +1,6 @@
+- name: Run tests
+  env:
+      token: ${{ secrets.token }}
+      channel: ${{ secrets.channel }}
+  run: |
+    nbdev_test_nbs
