@@ -1,6 +1,6 @@
 import os
-'discord_token_secret' = os.environ['token'] 
-'channel_name_secret' = os.environ['channel'] 
+discord_token_secret = os.environ['token'] 
+channel_name_secret = os.environ['channel'] 
 from discord.ext import commands
 from discord_slash import SlashCommand, SlashContext
 from discord_slash.utils.manage_commands import create_option
