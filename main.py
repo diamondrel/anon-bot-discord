@@ -20,15 +20,17 @@ slash = SlashCommand(client, sync_commands=True)
     )
   ]
 )
+@client.event
+async def on_ready():
+  channel = client.get_channel(channel_name_secret)
+  print(channel)
 async def _hello(ctx:SlashContext, text:str):
   await client.wait_until_ready()
   print(client)
   print("\n")
   print(channel_name_secret)
-  await channel = client.get_channel(channel_name_secret)
   print(text)
   print("\n")
-  print(channel)
   await channel.send(text)
   await ctx.send("Sent!",hidden=True,)
 
