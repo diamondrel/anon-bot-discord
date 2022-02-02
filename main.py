@@ -21,7 +21,7 @@ slash = SlashCommand(client, sync_commands=True)
   ]
 )
 
-async def _hello(ctx:SlashContext, text:str, channel:client.get_channel(channel_name_secret)):
+async def _hello(ctx:SlashContext, text:str):
   await client.wait_until_ready()
   print(client)
   print("\n")
