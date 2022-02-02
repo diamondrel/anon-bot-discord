@@ -28,7 +28,7 @@ async def _hello(ctx:SlashContext, text:str):
   print(channel_name_secret)
   print(text)
   print("\n")
-  await channel.send(text)
+  await client.get_channel(channel_name_secret).send(text)
   await ctx.send("Sent!",hidden=True,)
 
 client.run(discord_token_secret)
