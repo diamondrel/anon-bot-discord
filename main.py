@@ -1,9 +1,6 @@
 import os
-import yaml
-with open('/app/.github/workflows/database.yaml','r') as file:
-  yamFileOne = yaml.safe_load(file)
-discord_token_secret = yamFileOne['database']['env']['token']
-channel_name_secret = yamFileOne['database']['env']['channel']
+'discord_token_secret' = os.environ['token'] 
+'channel_name_secret' = os.environ['channel'] 
 from discord.ext import commands
 from discord_slash import SlashCommand, SlashContext
 from discord_slash.utils.manage_commands import create_option
