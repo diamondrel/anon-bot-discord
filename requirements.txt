@@ -1,5 +1,4 @@
 git+https://github.com/Rapptz/discord.py
-python==3.8
 discord-py-slash-command==3.0.3
 discord==1.7.3
 dnspython==1.16.0
