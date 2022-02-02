@@ -1,6 +1,6 @@
 import os
 import yaml
-with open('~/.github/workflows/database.yaml','r') as file:
+with open('/app/.github/workflows/database.yaml','r') as file:
   yamFileOne = yaml.safe_load(file)
 discord_token_secret = yamFileOne['database']['env']['token']
 channel_name_secret = yamFileOne['database']['env']['channel']
