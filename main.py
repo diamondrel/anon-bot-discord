@@ -2,7 +2,6 @@ import os
 import discord
 
 discord_token_secret = os.environ['token']
-channel_name_secret = os.environ['channel']
 bot = discord.Bot()
 
 @bot.slash_command(guild_ids=[691127432165589013])
