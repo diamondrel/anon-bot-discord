@@ -1,4 +1,4 @@
-import o
+import os
 import discord
 
 discord_token_secret = os.environ['token']
